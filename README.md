@@ -3,7 +3,7 @@
 ## Overview
 This project implements a question answering system for the NVIDIA CUDA documentation using web crawling, data chunking, vector database storage, and a language model for answering queries. Due to hardware limitations, ChromaDB is used instead of Milvus for storing and retrieving data.
 
-##efer Architecture..png For core architecture of full project.
+## Refer Architecture..png For core architecture of full project.
 
 ## Files and Functionalities
 
