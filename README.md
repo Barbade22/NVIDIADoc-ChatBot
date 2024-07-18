@@ -14,7 +14,7 @@ This project implements a question answering system for the NVIDIA CUDA document
 - 
 ### 2. A.py
 **Overview:**
-- **Functionality:**Used to evaluation of model and for model selection with UI.
+- **Functionality:** Used to evaluation of model and for model selection with UI.
 - **Output:** It Needs Input Questions and Context for answer.
 
 **Usage:**
