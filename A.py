@@ -73,7 +73,7 @@ def main():
     st.sidebar.code(
         """
         Question: "Why is model conversion important?"
-        Context: "The option to convert models between FARM and transformers gives freedom to the user..."
+        Context: "The option to convert models between FARM and transformers gives freedom to the user."
         """
     )
 

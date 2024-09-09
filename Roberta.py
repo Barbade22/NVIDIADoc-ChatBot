@@ -49,10 +49,10 @@ collection.add(
     metadatas=[{"source": metadata[i]} for i in range(len(metadata))],
     ids=[str(x) for x in document_dictionary]
 )
-
+device = 'cuda'
 # Load the RoBERTa model and tokenizer
 tokenizer = RobertaTokenizer.from_pretrained("deepset/roberta-base-squad2")
-model = RobertaForQuestionAnswering.from_pretrained("deepset/roberta-base-squad2")
+model = RobertaForQuestionAnswering.from_pretrained("deepset/roberta-base-squad2").to(device)
 
 st.set_page_config(page_title="NVIDIA CUDA Q&A", page_icon=":robot_face:", layout="wide")
 
@@ -71,7 +71,7 @@ if question:
     retrieved_docs = " ".join([doc for sublist in results['documents'] for doc in sublist])
 
     # Preprocess the input
-    inputs = tokenizer(question, retrieved_docs, return_tensors="pt")
+    inputs = tokenizer(question, retrieved_docs, return_tensors="pt").to(device)
 
     # Perform the QA inference
     outputs = model(**inputs)
